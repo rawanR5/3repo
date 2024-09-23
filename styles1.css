@@ -18,12 +18,12 @@ body,html{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    background-color: #39b54a;
+    background-color: #8c968d;
     padding: 30px;
 }
 
 .icon {
-    background-color: red;
+    background-color: rgb(255, 255, 255);
     width: 30px;
     height: 30px;
     border-radius: 50%;
@@ -36,12 +36,12 @@ body,html{
 
 .navbar a {
     text-decoration: none;
-    color: black;
+    color: rgb(250, 248, 248);
     font-size: 18px;
 }
 
 .navbar a:hover {
-    color: #2741cf;
+    color: #75bee3;
  }
 
 /* Buttons container */
@@ -105,12 +105,12 @@ body,html{
 }
 
 .cancel-btn:hover {
-    background-color: #808080;
+    background-color: #e53838;
 }
 
 
 .footer {
-    background-color: #2741cf;
+    background-color: #7c7d80;
     padding: 20px;
     text-align: center;
     color: white;
