@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rate Course</title>
+    <link rel="stylesheet" href="styles1.css">
+</head>
+<body>
+    <header class="header">
+        <div class="icon icon-left">
+            <img src="icon-left.png" alt="Left Icon">
+        </div>
+        <nav class="navbar">
+            <a href="xxx.html">Home</a>
+            <a href="xxx.html">Courses</a>
+            <a href="xxx.html">Sessions</a>
+            <a href="xxx.html">About Us</a>
+        </nav>
+        <div class="icon icon-right">
+            <img src="icon-right.png" alt="Right Icon">
+        </div>
+    </header>
+
+    <div class="form-container">
+        <form id="rateForm" onsubmit="return handleSubmit()">
+            <fieldset>
+                <legend>Rate Course</legend>
+                <label for="rating">Rate</label>
+                <div class="stars" aria-label="Rating of this course is 3 out of 5.">
+                    <span class="star" onclick="setRating(1)">&#9733;</span>
+                    <span class="star" onclick="setRating(2)">&#9733;</span>
+                    <span class="star" onclick="setRating(3)">&#9733;</span>
+                    <span class="star" onclick="setRating(4)">&#9733;</span>
+                    <span class="star" onclick="setRating(5)">&#9733;</span>
+                </div>
+                <label for="feedback">Give Your Feedback</label>
+                <textarea id="feedback" name="feedback" rows="4" required></textarea>
+                <div class="buttons">
+                    <button type="submit">Submit</button>
+                    <button type="button" onclick="formReset()" >Cancel</button>
+                </div>
+            </fieldset>
+        </form>
+    </div>
+
+    <footer class="footer">
+        <a href="mailto:someone@example.com" class="contact">Contact Us</a>
+        <p class="copyright">&copy; copyright</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
