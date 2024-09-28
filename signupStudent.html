@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Form</title>
+    <link rel="stylesheet" href="stylesSignUpT.css">
+</head>
+<body>
+
+    <div class="signUp-container">
+        <!-- Red Dot -->
+        <img src="img\istockphoto.jpg" alt="Person Icon" class="person-icon2">
+
+        <h2>Sign Up</h2>
+        <p class="switch-signup">Not a Student? <a href="signupTeacher (2).html">Sign up as a teacher?</a></p>
+        
+        <form action="#" method="post" class="signup-form-T">
+            <div class="form-row">
+                <input type="text" placeholder="First name" required>
+                <input type="text" placeholder="Last name" required>
+            </div>
+           
+            <div class="form-row">
+                <input type="email" placeholder="Email" required>
+                <input type="password" placeholder="Password" required>
+            </div>
+           
+            <!-- Optional Photo Upload -->
+            <div class="form-row">
+                <label for="photo-upload" class="photo-upload">
+                    <input type="file" id="photo-upload">
+                    <span>Photo (Optional)</span>
+                    <div class="upload-icon">&#x2193;</div> <!-- Arrow down symbol -->
+                </label>
+            </div>
+
+            <button type="submit">Continue</button>
+            <p class="login-link">Already have an account? <a href="loginStudent.html">Login</a></p>
+        </form>
+    </div>
+
+</body>
+</html>
+
