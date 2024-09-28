@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Langbloom - Manage Account</title>
+    <link rel="stylesheet" href="manageAcc.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="logo-text-container">
+                <img src="logo (4).png" alt="Langbloom Logo" class="logo">
+                <span class="website-name">Langbloom</span> <!-- Website name -->
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">Courses</a></li>
+                    <li><a href="#">Sessions</a></li>
+                    <li><a href="#footer">Contact us</a></li>
+                </ul>
+            </nav>
+            <div class="user-icon">
+                <img src="manageIcon1.png" alt="User Icon">
+                <div class="dropdown">
+                    <a href="#">Manage Profile</a>
+                    <a href="#">Log out</a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Profile Management Section -->
+    <section class="profile-management">
+        <h1>Profile Management</h1>
+        <div class="profile-picture">
+            <div class="circle-placeholder">
+                <input type="file" id="uploadImage" accept="image/*">
+                <label for="uploadImage" class="camera-icon">
+                    <img src="camera.png" alt="Upload Photo">
+                </label>
+            </div>
+        </div>
+
+        <form>
+            <div class="input-group">
+                <label for="firstName">First Name</label>
+                <input type="text" id="firstName" placeholder="First Name">
+            </div>
+            <div class="input-group">
+                <label for="lastName">Last Name</label>
+                <input type="text" id="lastName" placeholder="Last Name">
+            </div>
+            <div class="input-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" placeholder="Email">
+            </div>
+            <div class="button-group">
+                <button type="submit" class="save-btn">Save Changes</button>
+                <button type="button" class="delete-btn">Delete Account</button>
+            </div>
+        </form>
+    </section>
+
+    <!-- Footer -->
+    <footer id="footer">
+        <div class="container footer-container">
+            <div class="footer-section footer-logo">
+                <img src="whiteLogo.png" alt="Langbloom Logo" class="footer-logo-img">
+                <h3>Langbloom.</h3>
+                <p>Follow on social service</p>
+                <div class="social-icons">
+                    <a href="#"><img src="facbook.png" alt="Facebook"></a>
+                    <a href="#"><img src="instagram.png" alt="Instagram"></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#about">About us</a></li>
+                    <li><a href="#footer">Contact us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Support</h3>
+                <p>Riyadh - Saudi Arabia</p>
+                <p>+966555555555</p>
+            </div>
+        </div>
+        <p class="copyright">© Copyright 2024 all rights reserved</p>
+    </footer>
+
+    <script src="manageAccount.js"></script>
+</body>
+</html>
