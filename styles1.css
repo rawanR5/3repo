@@ -119,7 +119,7 @@ nav ul li a:hover::after {
 /*end header*/
 
 
-/* Buttons container */
+/*shared Buttons */
 .buttons-container {
     text-align: center;
     margin: 20px 0;
@@ -132,7 +132,7 @@ nav ul li a:hover::after {
     border: none;
     cursor: pointer;
     margin: 0 10px;
-    background-color: #a9a9a9;
+    background-color: #ff4081;
     color: white;
     border-radius: 5px;
 }
@@ -141,7 +141,7 @@ nav ul li a:hover::after {
 } 
 
 
-/* Session container */
+/* teacher Session  */
 .teacher-session-container {
     display: flex;
     justify-content: center;
@@ -163,7 +163,7 @@ nav ul li a:hover::after {
 .session-icon{ background-color: #ffffff; width: 30px; height: 30px; border-radius: 100px;}
 
 .teacher-session-image {
-    background-color: #ccc;
+    background-color: rgb(176, 187, 198);
     height: 200px;
     width: 100%;
     margin-bottom: 10px;
@@ -171,7 +171,7 @@ nav ul li a:hover::after {
 }
 .teacherImage { height: 150px ;width: 150px ; margin-top: 20px;}
 .teacherIcon { height:32px; width:32px; border-radius: 50%; }
-.session-text{font-style: oblique;background-color: rgb(197, 193, 193);border-radius: 10px;}
+.session-text{font-style: oblique;background-color:#e3e3e3;border-radius: 10px;}
 .course-session-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -179,6 +179,7 @@ nav ul li a:hover::after {
     justify-items: center;
     padding: 20px;
 }
+/*end teacher sessions*/
 /*my courses*/
 .course-session-card {
     background-color: #e3e3e3;
@@ -191,7 +192,7 @@ nav ul li a:hover::after {
 }
 
 .course-session-image {
-    background-color: #d0cece;
+    background-color: rgb(176, 187, 198);
     height: 100px;
     width: 100%;
     margin-bottom: 10px;
@@ -200,9 +201,9 @@ nav ul li a:hover::after {
 }
 .courseImage {margin-top: 5px; height: 90px; width: 120px;}
 /*end my courses*/
-
+/*in both student and teacher sessions ,it is for cancel and rate*/
 .cancel-btn {
-    background-color: #a9a9a9;
+    background-color: #ff4081;
     color: white;
     padding: 10px;
     border: none;
@@ -244,6 +245,10 @@ textarea {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+.sub-btn{background-color: #8bf98f}
+
+.cncl-btn{background-color:  #fd5748;}
+
 /*end rate cours*/
 /*rate teacher*/
 .reviews {
