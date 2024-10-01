@@ -1,0 +1,66 @@
+body {
+    padding-top: 100px; /* Adjust the value for more or less space */
+}
+
+/* Container to hold the entire layout */
+.container {
+    display: flex; /* Flexbox for side-by-side layout */
+    align-items: flex-start; /* Align items to the top */
+    justify-content: space-between; /* Space between elements */
+    padding: 20px;
+}
+
+/* Styling for the left section (image and rating) */
+.instructor-image {
+    flex: 1; /* Occupies one part of the available space */
+    text-align: center; /* Centers the content inside the box */
+    background-color: #f0f0f0; /* Light gray background */
+    border: 1px solid #ccc; /* Border around the box */
+    padding: 20px;
+    border-radius: 10px; /* Slightly rounded corners */
+    margin-right: 20px;
+}
+
+.instructor-image img {
+    width: 200px; /* Set a fixed width for the image */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 50%; /* Makes the image circular */
+    margin-bottom: 15px; /* Space between the image and rating */
+}
+
+.rating-and-reviews {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+/* Styling for the right section (teacher info) */
+.instructor-profile {
+    flex: 2; /* Occupies more space than the image */
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 10px; /* Rounded corners for a modern look */
+}
+
+h2 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+}
+
+p {
+    font-size: 16px;
+    color: #666;
+    line-height: 1.5;
+}
+
+.proficiency ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.bio {
+    margin-bottom: 20px;
+}
