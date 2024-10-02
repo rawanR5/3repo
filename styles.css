@@ -337,7 +337,11 @@ p{
     cursor: pointer;
     margin: 0 10px;
     background-color: #ff4081;
+<<<<<<< HEAD
     background-color:;
+=======
+    
+>>>>>>> 5d0aaf94aef64392fb3dbaba3b8b7f20bac47983
     color: white;
     border-radius: 100px;
 }
