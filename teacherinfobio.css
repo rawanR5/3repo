@@ -1,5 +1,6 @@
 body {
     padding-top: 100px; /* Adjust the value for more or less space */
+    font-family: 'Poppins', sans-serif; /* Font styling */
 }
 
 /* Container to hold the entire layout */
