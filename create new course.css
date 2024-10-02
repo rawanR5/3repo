@@ -1,5 +1,8 @@
-
 /* General Styles */
+.body-create-course {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
 
 
 body {
@@ -7,7 +10,6 @@ body {
     color: #333;
     font-family: sans-serif;
 }
-
 
 /* Header - Fixed in place */
 header {
@@ -17,7 +19,6 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
-
 }
 
 /* Logo and website name alignment */
@@ -132,137 +133,71 @@ nav ul li a:hover::after {
 }
 
 
-
 /* Ensure dropdown is visible when hovering on either the icon or the dropdown */
 .user-icon:hover .dropdown, .user-icon .dropdown:hover {
     display: block;
 }
 
-/*                                                         */
-
-.section-singup{
-margin-left:200px;
-margin-right:100px;
-
-
-
-}
-.signUp-container {
-    background-color: white;
-    padding: 30px;
-    border-radius: 20px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-    position: relative;
-    width: 490px;
-    height: 550px;
-    text-align: center;
-    margin: 140px;
-
-}
-
-
-.switch-signup {
-    font-size: 12px;
-    color: gray;
-}
-
-.switch-signup a {
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.signup-form-T {
-    display: flex;
-    flex-direction: column;
-}
-
-.form-row {
-    display: flex;
-    justify-content:space-between;
-    margin-bottom: 10px;
-}
-
-input[type="text"],
-input[type="email"],
-input[type="password"],
-input[type="number"],
-textarea {
-    padding: 10px;
-    width: 42%;
-    border: 1px solid #ccc;
+/* end header*/
+.container-course3 {
+    width: 400px;
+    margin: 100px auto;
+    padding: 20px;
+    background-color: #fff;
     border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    margin-top: 150px;
 }
 
-textarea {
-    width: 100%;
+/* Form Header - Buttons */
+.form-header-course {
+    text-align: right;
+    margin-bottom: 20px;
+}
+
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.discard {
+    background-color: #36b8b8;
+    color: white;
+}
+
+.save2 {
+    background-color: #36b8b8;
+    color: white;
+    margin-left: 10px;
+}
+
+/* Form Labels and Inputs */
+form label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #333;
+}
+
+.input-field {
+    width: 90%;
+    padding: 15px;
+    margin-bottom: 20px;
+    border: 1px solid #ccc;
+    border-radius: 25px;
+    background-color: #f0f0f0;
+    font-size: 14px;
+}
+
+.textarea {
+    height: 100px;
+    border-radius: 15px;
     resize: none;
 }
 
-
-/*photo */
-.person-icon2 {
-    width: 100px;
-    height: 100px;
-
-}
-
-/* Optional Photo Upload Styles */
-.photo-upload {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid #6f6f6f; /*  dashed border */
-    border-radius: 5px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    cursor: pointer;
-    position: relative;
-}
-
-#photo-upload {
-    display: none; /* Hide the default file input */
-}
-
-.photo-upload span {
-    color: gray;
-}
-
-.upload-icon {
-    font-size: 24px;
-    color: #616161; 
-    text-align: center;
-    
-
-}
-
-/* Link to login */
-.login-link {
-    font-size: 12px;
-    color: gray;
-    margin-top: 10px;
-}
-
-.login-link a {
-    color: #000;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-
-button {
-    background-color: #5f5e5e;
-    color: white;
-    padding: 10px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-
-button:hover {
-    background-color: #555;
-}
 
 
 /* Footer */
