@@ -53,7 +53,7 @@ label {
     color: #666;
     line-height: 1.5;
     margin-bottom: 20px;
-    background-color: #f0f0f0; /* Gray background for description */
+    background-color: #ffffff; /* Gray background for description */
     padding: 15px; /* Increased padding for better spacing */
     border-radius: 5px; /* Rounded corners for the box */
 }
@@ -74,7 +74,7 @@ label {
 }
 
 .details-text {
-    background-color: #f0f0f0; /* Gray background for details text */
+    background-color: #ffffff; /* Gray background for details text */
     padding: 10px; /* Add padding inside the box */
     border-radius: 5px; /* Rounded corners for the box */
     color: #666; /* Text color for gray boxes */
@@ -104,7 +104,7 @@ label {
 .enroll-button {
     padding: 10px; /* Adjusted padding for consistent height */
     background-color: #4a4a4a; /* Dark gray button color */
-    color: #fff; /* Text color for button */
+    color: #ffffff; /* Text color for button */
     border: none;
     border-radius: 5px; /* Rounded corners for the button */
     cursor: pointer;
@@ -129,7 +129,7 @@ h3 {
 ul {
     list-style: disc;
     margin-left: 5px;
-    background-color: #f0f0f0; /* Gray background for topics covered */
+    background-color: #ffffff; /* Gray background for topics covered */
     padding: 10px 10px 10px 25px; /* Added more padding on the left */
     border-radius: 5px; /* Rounded corners for the box */
     max-width: 700px; /* Set a maximum width to keep it responsive */
@@ -141,7 +141,7 @@ ul li {
 }
 
 .rating {
-    background-color: #f0f0f0; /* Light gray background for rating box */
+    background-color: #ffffff; /* Light gray background for rating box */
     padding: 10px; /* Padding inside the box */
     border-radius: 5px; /* Rounded corners */
     margin-bottom: 20px; /* Space below the rating section */
