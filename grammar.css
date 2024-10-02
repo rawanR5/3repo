@@ -1,15 +1,14 @@
-body {
-   /* background-color: #ecececdb; /* Background color for the body */
-    background-color: #ffffff;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
 
-    font-family: 'Poppins', sans-serif; /* Font styling */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh; /* Center the content vertically */
-    padding-top: 580px; /* Increased space at the top of the page */
-    padding-bottom: 600px;
-    margin: 0; /* Remove default margin */
+body {
+    background-color: #ffffff; /* Changed to white for the page background */
+    color: #333;
+    font-family: sans-serif;
 }
 
 /* header styles */
@@ -148,7 +147,9 @@ nav ul li a:hover::after {
     padding: 30px;
     max-width: 600px; /* Limit the width for better readability */
     width: 90%; /* Make it responsive */
-    margin-top: 30px; /* Space at the top of the course description */
+    margin-left: 400px;
+    
+    margin-top: 150px; /* Space at the top of the course description */
 }
 
 .course-image {
@@ -343,5 +344,97 @@ ul li {
 
 .view-info-button:hover {
     background-color: #4c4a4a; /* Slightly darker gray on hover */
+}
+footer {
+    background-color: #355a71;
+    color: white;
+    padding: 40px 0;
+    margin-top: 150px;
+    text-align: center;
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Spread the sections horizontally */
+    align-items: flex-start;        /* Align items to the top */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;               /* Override text-align center for layout */
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 15px;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align logo and text to the left */
+}
+
+.footer-logo-img {
+    width: 50px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center; /* Align icons horizontally */
+    margin-top: 15px; /* Adds space between text and social icons */
+}
+
+.social-icons a {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1); /* Makes the icons white */
+    margin-right: 10px; /* Adds space between the social icons */
+}
+
+.social-icons img:hover {
+    filter: brightness(1); /* On hover, it will revert to its original color */
+}
+
+/* Copyright Section */
+.copyright {
+    margin-top: 30px;
+    background-color: #2a3e52; /* Darker section for copyright notice */
+    padding: 10px 0;
+    color: #ffffff;
+    text-align: center;
 }
 
