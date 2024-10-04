@@ -1,0 +1,317 @@
+
+body {
+    background-color: #ffffff; /* Changed to white for the page background */
+    color: #333;
+    font-family: sans-serif;
+}
+
+
+/* Header - Fixed in place */
+header {
+    background-color: #f1f6f8;
+    padding: 20px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+
+}
+
+/* Logo and website name alignment */
+.logo-text-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* This ensures a small gap between the logo and text */
+    padding: 0; /* Removes any padding around the container */
+    margin: 0; /* Removes any margin around the container */
+}
+
+.logo {
+    width: 40px;
+    margin-right: 0px; /* Completely removes extra space next to the logo */
+    padding: 0; /* Ensures no padding on the logo */
+}
+
+.website-name {
+    font-size: 1.5em; /* Size of the text */
+    font-weight: bold;
+    color: #355a71; /* Dark blue color */
+    margin-left: 0; /* Ensures no extra margin on the text */
+    padding: 0; /* Ensures no extra padding */
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0; /* Ensures no extra padding on the container */
+    margin-left: 20px;
+    margin-right: 20px ;/* Removes any default margin */
+}
+
+.website-name {
+    font-size: 1.5em; /* Size of the text */
+    font-weight: bold;
+    color: #355a71; /* Dark blue color */
+}
+
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #ff4081;
+}
+
+nav ul li a:hover::after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color: #ff4081;
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+}
+
+
+
+.user-icon {
+    position: relative;
+}
+
+.user-icon img {
+    width: 60px;
+    cursor: pointer;
+}
+
+.dropdown {
+    display: none;
+    position: absolute;
+    top: 50px;
+    right: 0;
+    background-color: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    z-index: 999;
+}
+
+.dropdown a {
+    display: block;
+    padding: 10px 20px;
+    color: #333;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+
+.container-s {
+    width: 80%;
+    margin: 50px auto;
+    margin-top: 150px;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.button button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.button-s { 
+     background-color: #355a71;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top:10px;
+    margin-left: 10px;
+}
+
+.session-card {
+    background-color: #e4e4e49a;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.session-details {
+    display: flex;
+    flex-direction: column;
+}
+.session-details p {
+    margin: 5px 0;
+}
+.buttons-right {
+    display: flex;
+    gap: 10px;
+    margin-right: 50px;
+}
+.join-button {
+    background-color: #6cdf9f;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top:10px;
+    margin-left: 10px;
+}
+
+.cancel-button {
+    background-color: #d7366b;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:12px;
+    margin-top:10px;
+    margin-left: 10px;
+}
+
+.upload-button {
+    background-color: #36b8b8;
+    color: #fff;
+    padding: 7px 12px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top:10px;
+    margin-left: 10px;
+    font-size:11px;
+}
+
+.view-materials-btn {
+    background-color: #36b8b8;
+    color: #fff;
+    padding: 16px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top:10px;
+    margin-left: 10px;
+margin-right: 10px;
+    width: 250px;
+    font-size: 15px;
+
+}
+.view-materials-btn:hover{
+    background-color: #d7366b;
+}
+
+/* Footer */
+footer {
+    background-color: #355a71;
+    color: #ffffff;
+    padding: 40px 0;
+    margin-top: 150px;
+    text-align: center;
+
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between; /* Spread the sections horizontally */
+    align-items: flex-start;        /* Align items to the top */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;               /* Override text-align center for layout */
+}
+
+.footer-section {
+    flex: 1;
+    margin: 0 15px;
+}
+
+.footer-logo {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start; /* Align logo and text to the left */
+}
+
+.footer-logo-img {
+    width: 50px;
+    display: block;
+    margin-bottom: 10px;
+}
+
+.footer-section h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.footer-section ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-section ul li {
+    margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+    color: white;
+    text-decoration: none;
+}
+
+.footer-section ul li a:hover {
+    text-decoration: underline;
+}
+
+.footer-section p {
+    margin-bottom: 10px;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center; /* Align icons horizontally */
+    margin-top: 15px; /* Adds space between text and social icons */
+}
+
+.social-icons a {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.social-icons img {
+    width: 25px;
+    height: 25px;
+    filter: brightness(0) invert(1); /* Makes the icons white */
+    margin-right: 10px; /* Adds space between the social icons */
+}
+
+.social-icons img:hover {
+    filter: brightness(1); /* On hover, it will revert to its original color */
+}
+
+/* Copyright Section */
+.copyright {
+    margin-top: 30px;
+    background-color: #2a3e52; /* Darker section for copyright notice */
+    padding: 10px 0;
+    color: #ffffff;
+    text-align: center;
+}
