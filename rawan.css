@@ -136,6 +136,10 @@ nav ul li a:hover::after {
     color: white;
     border-radius: 5px;
 }
+.grey-btn{width: 170px; background-color: #355a71;}
+.grey-btn1{width: 170px;background-color: #ff4081 ;}
+.grey-btn2{width: 170px;background-color: #ff4081 ;}
+
 .btn:hover {
     background-color: #d52c2c;
 } 
@@ -171,7 +175,8 @@ nav ul li a:hover::after {
 }
 .teacherImage { height: 150px ;width: 150px ; margin-top: 20px;}
 .teacherIcon { height:32px; width:32px; border-radius: 50%; }
-.session-text{font-style: oblique;background-color:#e3e3e3;border-radius: 10px;}
+.session-text{font-style: oblique;background-color:#e3e3e3;border-radius: 10px;color:#008eed;}
+.courseTitle{font-style: oblique;font-weight: bold; color:#000000;}
 .course-session-container {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -183,8 +188,17 @@ nav ul li a:hover::after {
 /*my courses*/
 .course-session-card {
     background-color: #e3e3e3;
-    width: 200px;
+    width: 250px;
     height: 230px;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    margin-top: 50px;
+}
+.mycourse-card{
+    background-color: #e3e3e3;
+    width: 250px;
+    height: 300px;
     padding: 10px;
     border-radius: 5px;
     text-align: center;
@@ -199,9 +213,18 @@ nav ul li a:hover::after {
     border-radius: 5px;
 
 }
+.rate-course-btn{ background-color: #ff4081;
+    color: white;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 10px;
+    width: 120px;}
 .courseImage {margin-top: 5px; height: 90px; width: 120px;}
 /*end my courses*/
-/*in both student and teacher sessions ,it is for cancel and rate*/
+/*in teacher sessions */
 .cancel-btn {
     background-color: #ff4081;
     color: white;
@@ -210,7 +233,8 @@ nav ul li a:hover::after {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
-    margin-top: 5px;
+    margin-top: 10px;
+    width: 90px;
 }
 
 .cancel-btn:hover {
