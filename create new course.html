@@ -41,17 +41,29 @@
             <button class="btn discard">Discard</button>
             <button class="btn save2">Save changes</button>
         </div>
-
         <form>
+            <!-- Image Upload Section -->
+            <label for="course-image"><span>Upload Course Image</span></label>
+            <div class="image-upload">
+                <input type="file" id="course-image" class="input-field image-field" accept="image/*">
+                <div class="image-placeholder">
+                    <img id="preview-img" src="" alt="Image Preview" style="display:none;">
+                    <div class="upload-icon">
+                        <img src="img\download507.png" alt="Upload photo"> 
+                    </div>
+                </div>
+            </div>
+        
             <label for="title">Title</label>
             <input type="text" id="title" class="input-field" placeholder="Enter title">
-
+        
             <label for="overview">Overview</label>
             <textarea id="overview" class="input-field textarea" placeholder="Enter overview"></textarea>
-
-            <label for="material">Material</label>
-            <input type="file" id="material" class="input-field textarea" placeholder="Enter material">
+        
+            <label for="sessions">Number of sessions</label>
+            <input type="number" id="sessions" class="input-field" placeholder="Enter number of sessions">
         </form>
+        
     </div>
 
 
