@@ -148,6 +148,10 @@ nav ul li a:hover::after {
     margin-left: 10px;
 }
 
+.button-s.active {
+    background-color: #ff4081;
+} 
+
 .session-card {
     background-color: #e4e4e49a;
     padding: 20px;
