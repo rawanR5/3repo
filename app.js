@@ -30,7 +30,7 @@ const getUsers = async () => {
     try {
         const querySnapshot = await getDocs(collection(db, "Users"));
         querySnapshot.forEach((doc) => {
-            console.log(${doc.id} => ${JSON.stringify(doc.data())});
+            console.log(`${doc.id} => ${JSON.stringify(doc.data())}`);
         });
     } catch (e) {
         console.error("Error fetching users: ", e);
@@ -43,5 +43,5 @@ document.addEventListener("DOMContentLoaded", () => {
     addUser("John", "Doe", "john.doe@example.com");
 
     // مثال: قراءة بيانات المستخدمين
-    getUsers();
+    getUsers();
 });

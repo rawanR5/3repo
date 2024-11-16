@@ -1,41 +1,62 @@
-document.addEventListener("DOMContentLoaded", () => {
+// Form validation
+/* document.querySelector('.signup-form-T').addEventListener('submit', function (e) {
+    e.preventDefault();
 
-    const continueButton = document.querySelector("button");
-    const form = document.querySelector('.signup-form-T');
-    const firstNameInput = document.querySelector('#first-name');
-    const lastNameInput = document.querySelector('#last-name');
-    const emailInput = document.querySelector('#email');
-    const passwordInput = document.querySelector('#password');
+    const firstName = document.querySelector('input[placeholder="First name"]').value.trim();
+    const lastName = document.querySelector('input[placeholder="Last name"]').value.trim();
+    const email = document.querySelector('input[placeholder="Email"]').value.trim();
+    const password = document.querySelector('input[placeholder="Password"]').value.trim();
 
+    if (!firstName || !lastName || !email || !password) {
+        alert('Please fill in all required fields!');
+        return;
+    }
 
-    continueButton.addEventListener("click", (event) => {
-        event.preventDefault(); 
+    if (password.length < 8) {
+        alert('Password must be at least 8 characters!');
+        return;
+    }
 
-        if (!firstNameInput.value || !lastNameInput.value || !emailInput.value || !passwordInput.value) {
-            alert('All fields except photo are required!');
-            return;
-        }
+    alert('Form submitted successfully!');
+ 
+}); */
 
-  
-        alert('Form submitted successfully!');
-        window.location.href = "homePageStudent.html"; 
-    });
+import { addUser } from "./app.js";
 
+document.querySelector('.signup-form-T').addEventListener('submit', async function (e) {
+    e.preventDefault();
 
-    form.addEventListener('submit', (event) => {
-     
-        event.preventDefault();
+    const firstName = document.querySelector('input[placeholder="First name"]').value.trim();
+    const lastName = document.querySelector('input[placeholder="Last name"]').value.trim();
+    const email = document.querySelector('input[placeholder="Email"]').value.trim();
+    const password = document.querySelector('input[placeholder="Password"]').value.trim();
 
+    if (!firstName || !lastName || !email || !password) {
+        alert("Please fill in all required fields!");
+        return;
+    }
 
-        if (!firstNameInput.value || !lastNameInput.value || !emailInput.value || !passwordInput.value) {
-            alert('All fields except photo are required!');
-            return;
-        }
+    const userData = {
+        first_name: firstName,
+        last_name: lastName,
+        email: email,
+        password: btoa(password), // For demo; use bcrypt in production
+        role: "s", // Default role for students
+        age: 0,
+        bio: "",
+        city: "",
+        gender: "",
+        phone: "",
+        photo: "",
+    };
 
+    try {
+        await addUser(userData); // Pass the object
+        alert("Sign-up successful!");
+    } catch (error) {
+        console.error("Sign-up failed:", error);
+        alert("Failed to sign up. Please try again.");
+    }
 
-        alert('Form submitted successfully!');
-
-
-        form.reset();
-    });
+    console.log("User data being sent:", userData);
 });
