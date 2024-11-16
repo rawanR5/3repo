@@ -2,7 +2,7 @@ import { collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/
 import { db } from "./firebase.js";
 
 // إضافة مستخدم جديد إلى قاعدة البيانات
-const addUser = async (firstName, lastName, email) => {
+/* const addUser = async (firstName, lastName, email) => {
     try {
         const docRef = await addDoc(collection(db, "users"), {
             first_name: firstName,
@@ -13,12 +13,22 @@ const addUser = async (firstName, lastName, email) => {
     } catch (e) {
         console.error("Error adding user: ", e);
     }
+}; */
+
+export const addUser = async (userData) => {
+    try {
+        console.log("Adding user data:", userData); // Debug log
+        const docRef = await addDoc(collection(db, "Users"), userData);
+        console.log("User added with ID:", docRef.id);
+    } catch (e) {
+        console.error("Error adding user:", e.message);
+    }
 };
 
 // قراءة بيانات المستخدمين
 const getUsers = async () => {
     try {
-        const querySnapshot = await getDocs(collection(db, "users"));
+        const querySnapshot = await getDocs(collection(db, "Users"));
         querySnapshot.forEach((doc) => {
             console.log(`${doc.id} => ${JSON.stringify(doc.data())}`);
         });
