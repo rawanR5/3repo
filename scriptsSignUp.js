@@ -1,22 +1,41 @@
-// Form validation
-document.querySelector('.signup-form-T').addEventListener('submit', function (e) {
-    e.preventDefault();
+document.addEventListener("DOMContentLoaded", () => {
 
-    const firstName = document.querySelector('input[placeholder="First name"]').value.trim();
-    const lastName = document.querySelector('input[placeholder="Last name"]').value.trim();
-    const email = document.querySelector('input[placeholder="Email"]').value.trim();
-    const password = document.querySelector('input[placeholder="Password"]').value.trim();
+    const continueButton = document.querySelector("button");
+    const form = document.querySelector('.signup-form-T');
+    const firstNameInput = document.querySelector('#first-name');
+    const lastNameInput = document.querySelector('#last-name');
+    const emailInput = document.querySelector('#email');
+    const passwordInput = document.querySelector('#password');
 
-    if (!firstName || !lastName || !email || !password) {
-        alert('Please fill in all required fields!');
-        return;
-    }
 
-    if (password.length < 8) {
-        alert('Password must be at least 8 characters!');
-        return;
-    }
+    continueButton.addEventListener("click", (event) => {
+        event.preventDefault(); 
 
-    alert('Form submitted successfully!');
- 
+        if (!firstNameInput.value || !lastNameInput.value || !emailInput.value || !passwordInput.value) {
+            alert('All fields except photo are required!');
+            return;
+        }
+
+  
+        alert('Form submitted successfully!');
+        window.location.href = "homePageStudent.html"; 
+    });
+
+
+    form.addEventListener('submit', (event) => {
+     
+        event.preventDefault();
+
+
+        if (!firstNameInput.value || !lastNameInput.value || !emailInput.value || !passwordInput.value) {
+            alert('All fields except photo are required!');
+            return;
+        }
+
+
+        alert('Form submitted successfully!');
+
+
+        form.reset();
+    });
 });
