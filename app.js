@@ -1,7 +1,7 @@
 import { collection, addDoc, getDocs } from "https://www.gstatic.com/firebasejs/10.5.0/firebase-firestore.js";
 import { db } from "./firebase.js";
 
-// إضافة مستخدم جديد إلى قاعدة البيانات
+
 const addUser = async (firstName, lastName, email) => {
     try {
         const docRef = await addDoc(collection(db, "users"), {
@@ -15,7 +15,7 @@ const addUser = async (firstName, lastName, email) => {
     }
 };
 
-// قراءة بيانات المستخدمين
+
 const getUsers = async () => {
     try {
         const querySnapshot = await getDocs(collection(db, "users"));
@@ -27,11 +27,11 @@ const getUsers = async () => {
     }
 };
 
-// استدعاء الوظائف عند تحميل الصفحة
+
 document.addEventListener("DOMContentLoaded", () => {
-    // مثال: إضافة مستخدم جديد
+ 
     addUser("John", "Doe", "john.doe@example.com");
 
-    // مثال: قراءة بيانات المستخدمين
+
     getUsers();
 });
