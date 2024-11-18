@@ -6,12 +6,14 @@ document.querySelector('.signup-form-T').addEventListener('submit', function (e)
     const firstName = document.querySelector('input[placeholder="First name"]').value.trim();
     const lastName = document.querySelector('input[placeholder="Last name"]').value.trim();
     const age = document.querySelector('input[placeholder="Age"]').value.trim();
-    const gender = document.querySelector('input[placeholder="Gender"]').value.trim();
+    const gender = document.querySelector('select[name="gender"]').value.trim();
     const email = document.querySelector('input[placeholder="Email"]').value.trim();
     const password = document.querySelector('input[placeholder="Password"]').value.trim();
     const phone = document.querySelector('input[placeholder="Phone"]').value.trim();
     const city = document.querySelector('input[placeholder="City"]').value.trim();
     const bio = document.querySelector('textarea[placeholder="Short Bio"]').value.trim();
+    const photoInput = document.querySelector('#photo-upload');
+    const photo = photoInput.files.length > 0 ? photoInput.files[0] : null;
 
     // Validating inputs
     if (!firstName || !lastName || !age || !gender || !email || !password) {
@@ -39,21 +41,39 @@ document.querySelector('.signup-form-T').addEventListener('submit', function (e)
         return;
     }
 
-    // Displaying success message or sending data to the server
-    console.log('Form Submitted Successfully:');
-    console.log({
-        firstName,
-        lastName,
-        age,
-        gender,
-        email,
-        password,
-        phone,
-        city,
-        bio,
-    });
+    // Prepare data for submission
+    const formData = new FormData();
+    formData.append('first_name', firstName);
+    formData.append('last_name', lastName);
+    formData.append('age', age);
+    formData.append('gender', gender);
+    formData.append('email', email);
+    formData.append('password', password);
+    formData.append('phone', phone);
+    formData.append('city', city);
+    formData.append('bio', bio);
+    if (photo) {
+        formData.append('photo', photo);
+    }
 
-    alert('Sign-up successful! Thank you for registering as a teacher.');
+    // Send form data to the server via AJAX
+    fetch('signupTeacher.php', {
+        method: 'POST',
+        body: formData,
+    })
+        .then((response) => response.json())
+        .then((data) => {
+            if (data.status === 'success') {
+                alert(data.message);
+                window.location.href = 'loginTeacher.html'; // Redirect on success
+            } else {
+                alert(data.message);
+            }
+        })
+        .catch((error) => {
+            console.error('Error:', error);
+            alert('An error occurred. Please try again.');
+        });
 
     // Reset the form
     document.querySelector('.signup-form-T').reset();
