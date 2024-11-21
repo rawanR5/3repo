@@ -1,7 +1,7 @@
 <?php
-require_once 'connectiondb.php'; // Include database connection
+require_once 'connectiondb.php'; //  database connection
 
-// Enable error reporting for debugging
+
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
 error_reporting(E_ALL);
@@ -11,11 +11,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $title = $_POST['title'] ?? null;
     $overview = $_POST['overview'] ?? null;
     $sessions = $_POST['sessions'] ?? null;
-    $teacher_id = 1; // Replace with the logged-in teacher's ID
+    $teacher_id = 1; 
 
-    // Check required fields
+    
     if (!$title || !$overview || !$sessions) {
-        die(json_encode(['status' => 'error', 'message' => 'Required fields are missing.']));
+        echo "<script>alert('Required fields are missing.'); window.location.href='create_new_course.php';</script>";
+        exit;
     }
 
     // Handle the uploaded image
@@ -33,29 +34,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
         // Move the file to the uploads directory
         if (!move_uploaded_file($imageTmpPath, $imagePath)) {
-            die(json_encode(['status' => 'error', 'message' => 'Image upload failed.']));
+            echo "<script>alert('Image upload failed.'); window.location.href='create_new_course.php';</script>";
+            exit;
         }
     }
 
     // Insert course data into the database
     $query = "INSERT INTO courses (title, overview, num_sessions, image_path, teacher_id) VALUES (?, ?, ?, ?, ?)";
     $stmt = $conn->prepare($query);
-
     if (!$stmt) {
-        die(json_encode(['status' => 'error', 'message' => 'Database prepare error: ' . $conn->error]));
+        echo "<script>alert('Database prepare error: " . $conn->error . "'); window.location.href='create_new_course.php';</script>";
+        exit;
     }
 
     $stmt->bind_param("ssisi", $title, $overview, $sessions, $imagePath, $teacher_id);
-
     if ($stmt->execute()) {
-        echo json_encode(['status' => 'success', 'message' => 'Course created successfully!']);
+        // Redirect to the view_course_asTeacher.php page on success
+        header("Location: view_course_asTeacher.php");
+        exit;
     } else {
-        echo json_encode(['status' => 'error', 'message' => 'Database execute error: ' . $stmt->error]);
+        echo "<script>alert('Database execute error: " . $stmt->error . "'); window.location.href='create_new_course.php';</script>";
+        exit;
     }
 
     $stmt->close();
     $conn->close();
-    exit;
 }
 ?>
 
@@ -66,10 +69,31 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Create a New Course</title>
     <link rel="stylesheet" href="create new course.css">
-    <script src="create new course.js" defer></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            var fileInput = document.getElementById('course-image');
+            var previewImg = document.getElementById('preview-img');
+
+            fileInput.addEventListener('change', function() {
+                var file = fileInput.files[0];
+                var reader = new FileReader();
+
+                reader.onloadend = function() {
+                    previewImg.src = reader.result;
+                    previewImg.style.display = 'block';
+                }
+
+                if (file) {
+                    reader.readAsDataURL(file);
+                } else {
+                    previewImg.src = "";
+                    previewImg.style.display = 'none';
+                }
+            });
+        });
+    </script>
 </head>
 <body class="body-create-course">
-
     <!-- Header -->
     <header>
         <div class="container">
@@ -80,7 +104,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <nav>
                 <ul>
                     <li><a href="homePageTeacher.html">Home</a></li>
-                    <li><a href="view_course_as_teacher.php">Courses</a></li>
+                    <li><a href="view_course_asTeacher.php">Courses</a></li>
                     <li><a href="incomingSession-teacher.html">Sessions</a></li>
                     <li><a href="reviewsTeacher.html">Reviews & Ratings</a></li>
                     <li><a href="requestPage.html">Requests</a></li>
@@ -131,7 +155,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h3>Langbloom.</h3>
                 <p>Follow on social service</p>
                 <div class="social-icons">
-                    <a href="#"><img src="facbook.png" alt="Facebook"></a>
+                    <a href="#"><img src="facebook.png" alt="Facebook"></a>
                     <a href="#"><img src="instagram.png" alt="Instagram"></a>
                 </div>
             </div>
@@ -143,7 +167,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <li><a href="#footer">Contact us</a></li>
                 </ul>
             </div>
-            <div class="footer-section">
+            <div the="footer-section">
                 <h3>Support</h3>
                 <p>Riyadh - Saudi Arabia</p>
                 <p>+966555555555</p>
