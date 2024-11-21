@@ -14,7 +14,7 @@
         <div class="container">
             <div class="logo-text-container">
                 <img src="logo (4).png" alt="Langbloom Logo" class="logo">
-                <span class="website-name">Langbloom</span> <!-- Website name -->
+                <span class="website-name">Langbloom</span>
             </div>
             <nav>
                 <ul>
@@ -60,7 +60,7 @@
         if ($course_result && $course_result->num_rows > 0) {
             $course = $course_result->fetch_assoc();
             echo "<h2>" . htmlspecialchars($course['title']) . "</h2>";
-            echo "<img src='" . htmlspecialchars($course['image_path']) . "' alt='Course Image' class='course-image'>"; // Using image_path from the database
+            echo "<img src='" . htmlspecialchars($course['image_path']) . "' alt='Course Image' class='course-image'>";
             echo "<label>Description:</label>";
             echo "<p class='description'>" . htmlspecialchars($course['overview']) . "</p>";
             echo "<div class='details'>";
@@ -77,8 +77,9 @@
         }
 
         // Fetch reviews and calculate average
-        $sql_reviews = "SELECT r.rating
+        $sql_reviews = "SELECT r.rating, r.feedback, s.first_name, s.last_name
                         FROM reviews r
+                        JOIN students s ON r.student_id = s.student_id
                         WHERE r.course_id = $course_id";
         $reviews_result = $conn->query($sql_reviews);
 
@@ -87,16 +88,20 @@
 
         if ($reviews_result && $reviews_result->num_rows > 0) {
             while ($review = $reviews_result->fetch_assoc()) {
-                $total_rating += $review['rating']; // Adding the rating to the total
-                $num_reviews++; // Increasing the number of reviews
+                $total_rating += $review['rating'];
+                $num_reviews++;
+                echo "<div class='review'>";
+                echo "<p><strong>" . htmlspecialchars($review['first_name']) . " " . htmlspecialchars($review['last_name']) . ":</strong></p>";
+                echo "<p>Rating: " . str_repeat('⭐', $review['rating']) . " (" . $review['rating'] . "/5)</p>";
+                echo "<p>\"".$review['feedback']."\"</p>";
+                echo "</div>";
             }
 
             // Calculate the average
             $average_rating = $total_rating / $num_reviews;
-            // Round the average rating to one decimal place
             $average_rating = number_format($average_rating, 1);
 
-            // Display the overall rating and reviews
+            // Display the overall rating
             echo "<div class='rating'>";
             echo "<label>Overall Rating:</label>";
             echo "<p>$average_rating/5 (Based on $num_reviews reviews)</p>";
@@ -107,8 +112,8 @@
 
         // Process enroll button
         if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['enroll'])) {
-            $student_id = 1; // This should be changed to the logged-in student ID
-            $course_status = 'In Progress'; // This can be changed if necessary
+            $student_id = 1; // Change this to logged-in student's ID
+            $course_status = 'In Progress';
             $sessions_completed = 0;
 
             // Insert enrollment into the database
@@ -117,7 +122,7 @@
             if ($conn->query($sql_enroll) === TRUE) {
                 echo "<script>
                         alert('Successfully enrolled in the course.');
-                        window.location.href = 'studentCourses.php'; // Redirect to the student courses page
+                        window.location.href = 'studentCourses.php';
                       </script>";
             } else {
                 echo "Error: " . $conn->error;
