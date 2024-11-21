@@ -51,7 +51,7 @@
         }
 
         // Fetch course details
-        $sql_course = "SELECT c.title, c.overview, c.num_sessions, c.image_path, t.first_name, t.last_name
+        $sql_course = "SELECT c.title, c.overview, c.num_sessions, c.image_path, t.first_name, t.last_name, t.teacher_id
                        FROM courses c
                        JOIN teachers t ON c.teacher_id = t.teacher_id
                        WHERE c.course_id = $course_id";
@@ -67,7 +67,7 @@
             echo "<div><label>Teacher:</label>";
             echo "<div class='details-text teacher-info'>";
             echo "<p>Professor " . htmlspecialchars($course['first_name']) . " " . htmlspecialchars($course['last_name']) . "</p>";
-            echo "<a href='teacherinfobio2.html'><button class='view-info-button'>View info</button></a>";
+            echo "<a href='teacherinfobio.php?teacher_id=" . htmlspecialchars($course['teacher_id']) . "'><button class='view-info-button'>View Profile</button></a>";
             echo "</div></div>";
             echo "<div><label>Number of Sessions: </label><p class='details-text'>" . htmlspecialchars($course['num_sessions']) . "</p></div>";
             echo "</div>";
