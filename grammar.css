@@ -6,7 +6,7 @@
 }
 
 body {
-    background-color: #ffffff; /* Changed to white for the page background */
+    background-color: #ffffff; 
     color: #333;
     font-family: sans-serif;
 }
@@ -19,36 +19,35 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); 
 }
 .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0; /* Ensures no extra padding on the container */
+    padding: 0;
     margin-left: 20px;
-    margin-right: 20px ;/* Removes any default margin */
+    margin-right: 20px;
 }
 .website-name {
-    font-size: 1.5em; /* Size of the text */
+    font-size: 1.5em;
     font-weight: bold;
-    color: #355a71; /* Dark blue color */
+    color: #355a71;
 }
-
 
 .logo-text-container {
     display: flex;
     align-items: center;
-    gap: 5px; /* This ensures a small gap between the logo and text */
-    padding: 0; /* Removes any padding around the container */
-    margin: 0; /* Removes any margin around the container */
+    gap: 5px;
+    padding: 0;
+    margin: 0;
 }
 
 .logo {
     width: 40px;
-    margin-right: 0px; /* Completely removes extra space next to the logo */
-    padding: 0; /* Ensures no padding on the logo */
+    margin-right: 0;
+    padding: 0;
 }
-
 
 nav ul {
     list-style-type: none;
@@ -80,6 +79,7 @@ nav ul li a:hover::after {
     bottom: -5px;
     left: 0;
 }
+
 .user-icon {
     position: relative;
 }
@@ -108,16 +108,14 @@ nav ul li a:hover::after {
     font-weight: bold;
 }
 
-
-
 /* Ensure dropdown is visible when hovering on either the icon or the dropdown */
 .user-icon:hover .dropdown, .user-icon .dropdown:hover {
     display: block;
 }
-/*end header*/
 
+/* End header */
 
-/*shared Buttons */
+/* Shared Buttons */
 .buttons-container {
     text-align: center;
     margin: 20px 0;
@@ -134,45 +132,45 @@ nav ul li a:hover::after {
     color: white;
     border-radius: 5px;
 }
+
 .btn:hover {
     background-color: #d52c2c;
-} 
+}
 
-/* end header style  */
+/* End header styles */
 
+/* Course description */
 .course-description {
-    background-color: #fff; /* White background for the course description */
-    border-radius: 10px; /* Rounded corners */
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Subtle shadow */
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
     padding: 30px;
-    max-width: 600px; /* Limit the width for better readability */
-    width: 90%; /* Make it responsive */
-    margin-left: 400px;
-    
-    margin-top: 150px; /* Space at the top of the course description */
+    max-width: 600px;
+    width: 90%;
+    margin: 150px auto 0; /* Center the course description and add top margin */
 }
 
 .course-image {
-    display: block; /* Center the image */
-    margin: 0 auto; /* Center the image */
-    max-width: 50%; /* Reduced the maximum width to make the image smaller */
-    height: auto; /* Maintain aspect ratio */
-    border-radius: 5px; /* Rounded corners for the image */
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for the image */
-    margin-bottom: 30px; /* Add space below the image */
+    display: block;
+    margin: 0 auto;
+    max-width: 50%;
+    height: auto;
+    border-radius: 5px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
 }
 
 h2 {
     font-size: 24px;
     font-weight: bold;
     color: #333;
-    text-align: center; /* Center the heading text */
-    margin-bottom: 20px; /* Add space below the heading */
+    text-align: center;
+    margin-bottom: 20px;
 }
 
 label {
-    font-weight: bold; /* Make labels bold */
-    margin-top: 10px; /* Add space above labels */
+    font-weight: bold;
+    margin-top: 10px;
 }
 
 .description {
@@ -180,9 +178,9 @@ label {
     color: #666;
     line-height: 1.5;
     margin-bottom: 20px;
-    background-color: #f0f0f0; /* Gray background for description */
-    padding: 15px; /* Increased padding for better spacing */
-    border-radius: 5px; /* Rounded corners for the box */
+    background-color: #f0f0f0;
+    padding: 15px;
+    border-radius: 5px;
 }
 
 .details {
@@ -192,60 +190,55 @@ label {
 }
 
 .details div {
-    flex: 1; /* Equal spacing for both columns */
-    margin-right: 20px; /* Space between columns */
+    flex: 1;
+    margin-right: 20px;
 }
 
 .details div:last-child {
-    margin-right: 0; /* Remove margin from the last column */
+    margin-right: 0;
 }
 
 .details-text {
-    background-color: #f0f0f0; /* Gray background for details text */
-    padding: 10px; /* Add padding inside the box */
-    border-radius: 5px; /* Rounded corners for the box */
-    color: #666; /* Text color for gray boxes */
-    margin-top: 10px; /* Space above details text */
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    color: #666;
+    margin-top: 10px;
 }
 
 .enrollment {
     display: flex;
     align-items: center;
-    /*margin-bottom: 20px; /* Add space below the enrollment section */
-    margin-top: 5px; /* Reduce the space above the enrollment section */
-    margin-bottom: 20px; /* Space below the enrollment section */
+    margin-top: 5px;
+    margin-bottom: 20px;
 }
 
 .enrollment label {
-    margin-top: 10px; /* Space above the label */
+    margin-top: 10px;
 }
 
 .price {
-    background-color: transparent; /* No background for price */
-    margin-left: 10px; /* Space between label and price */
-    color: #666; /* Text color for price */
-    margin-left: 10px; /* Space between label and price */
-    margin-top: 0; /* Remove space above price */
+    background-color: transparent;
+    margin-left: 10px;
+    color: #666;
 }
 
 .enroll-button {
-    padding: 10px; /* Adjusted padding for consistent height */
-    background-color: #4a4a4a; /* Dark gray button color */
-    color: #fff; /* Text color for button */
+    padding: 10px;
+    background-color: #4a4a4a;
+    color: #fff;
     border: none;
-    border-radius: 5px; /* Rounded corners for the button */
+    border-radius: 5px;
     cursor: pointer;
-    transition: background-color 0.3s; /* Smooth transition */
-    margin-top: 10px; /* Space above the button */
-    width: 100%; /* Make the button full width */
-    
-    max-width: 700px; /* Limit width if needed */
+    transition: background-color 0.3s;
+    margin-top: 10px;
+    width: 100%;
+    max-width: 700px;
 }
 
 .enroll-button:hover {
-    background-color: #333; /* Darker gray on hover */
+    background-color: #333;
 }
-
 
 h3 {
     font-size: 18px;
@@ -253,107 +246,92 @@ h3 {
     margin-bottom: 10px;
 }
 
-
-
 ul li {
-    color: #666; /* Text color for the list items to match other elements */
-    padding: 5px 0; /* Add space between list items */
+    color: #666;
+    padding: 5px 0;
 }
 
 .rating {
-    background-color: #f0f0f0; /* Light gray background for rating box */
-    padding: 10px; /* Padding inside the box */
-    border-radius: 5px; /* Rounded corners */
-    margin-bottom: 20px; /* Space below the rating section */
-    font-size: 16px; /* Font size for text */
-    color: #333; /* Dark text color */
+    background-color: #f0f0f0;
+    padding: 10px;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    font-size: 16px;
+    color: #333;
 }
 
 .reviews {
-    background-color: #ececec; /* Light gray background for reviews */
+    background-color: #ececec;
     padding: 15px;
-    border-radius: 5px; /* Rounded corners */
+    border-radius: 5px;
     margin-bottom: 20px;
 }
 
 .review {
-    background-color: #ffffff; /* White background for individual reviews */
+    background-color: #ffffff;
     padding: 10px;
     border-radius: 5px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow */
-    margin-bottom: 15px; /* Space between each review */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    margin-bottom: 15px;
 }
 
 .review p {
-    margin: 5px 0; /* Spacing for review text */
+    margin: 5px 0;
 }
 
 .review strong {
-    color: #333; /* Darker color for reviewer's name */
+    color: #333;
 }
 
 .review .rating {
-    font-size: 14px; /* Font size for the review rating */
-    color: #ffcc00; /* Star color for ratings */
+    font-size: 14px;
+    color: #ffcc00;
 }
 
 .review-text {
-    font-size: 14px; /* Adjust font size for the review text */
-    color: #666; /* Color for the review text */
-}
-
-
-
-
-.details-text {
-    background-color: #f0f0f0; /* Gray background for details text */
-    padding: 18px; /* Add padding inside the box */
-    border-radius: 5px; /* Rounded corners for the box */
-    color: #666; /* Text color for gray boxes */
-    margin-top: 10px; /* Space above details text */
-   
+    font-size: 14px;
+    color: #666;
 }
 
 .teacher-info {
     display: flex;
-    align-items: center; /* Align text and button vertically */
+    align-items: center;
     margin-left: 2px;
-    padding: 2px 1px; /* Reduced padding to decrease height */
-   
-   
+    padding: 2px 1px;
 }
 
 .view-info-button {
-    padding: 4px 8px; /* Adjust padding for a small button */
-    background-color: #333 ; /* dark gray background color */
-    border: none; /* Remove the border */
-    color:  #ececec; /* Dark text color */
-    border-radius: 5px; /* Rounded corners */
+    padding: 4px 8px;
+    background-color: #333;
+    border: none;
+    color: #ececec;
+    border-radius: 5px;
     cursor: pointer;
-    font-size: 12px; /* Smaller font size for the button */
-    transition: background-color 0.3s ease; /* Smooth transition */
+    font-size: 12px;
+    transition: background-color 0.3s ease;
     margin-left: 30px;
 }
 
 .view-info-button:hover {
-    background-color: #4c4a4a; /* Slightly darker gray on hover */
+    background-color: #4c4a4a;
 }
+
+/* Footer */
 footer {
     background-color: #355a71;
     color: white;
     padding: 40px 0;
     margin-top: 150px;
     text-align: center;
-
 }
 
 .footer-container {
     display: flex;
-    justify-content: space-between; /* Spread the sections horizontally */
-    align-items: flex-start;        /* Align items to the top */
+    justify-content: space-between;
+    align-items: flex-start;
     max-width: 1200px;
     margin: 0 auto;
-    text-align: left;               /* Override text-align center for layout */
+    text-align: left;
 }
 
 .footer-section {
@@ -364,7 +342,7 @@ footer {
 .footer-logo {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; /* Align logo and text to the left */
+    align-items: flex-start;
 }
 
 .footer-logo-img {
@@ -402,8 +380,8 @@ footer {
 
 .social-icons {
     display: flex;
-    align-items: center; /* Align icons horizontally */
-    margin-top: 15px; /* Adds space between text and social icons */
+    align-items: center;
+    margin-top: 15px;
 }
 
 .social-icons a {
@@ -414,20 +392,19 @@ footer {
 .social-icons img {
     width: 25px;
     height: 25px;
-    filter: brightness(0) invert(1); /* Makes the icons white */
-    margin-right: 10px; /* Adds space between the social icons */
+    filter: brightness(0) invert(1);
+    margin-right: 10px;
 }
 
 .social-icons img:hover {
-    filter: brightness(1); /* On hover, it will revert to its original color */
+    filter: brightness(1);
 }
 
 /* Copyright Section */
 .copyright {
     margin-top: 30px;
-    background-color: #2a3e52; /* Darker section for copyright notice */
+    background-color: #2a3e52;
     padding: 10px 0;
     color: #ffffff;
     text-align: center;
 }
-
