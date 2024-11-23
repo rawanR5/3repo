@@ -1,112 +1,11 @@
 body {
-    font-family:  sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f7f7f7;
-}
-
-
-.container-s {
-    width: 80%;
-    margin: 50px auto;
-    margin-top: 150px;
-}
-
-h1 {
-    text-align: center;
+    background-color: #ffffff; /* Changed to white for the page background */
     color: #333;
+    font-family: sans-serif;
 }
 
-.course-section {
-    margin-bottom: 20px;
-    
-    border: 1px solid #e0e0e0;
-    border-radius: 8px;
-    padding: 40px; /* Increased padding */
-    background-color: #e4e4e49a;
-}
 
-.course-name {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.schedule {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.schedule label {
-    margin-right: 10px;
-}
-
-.schedule select {
-    margin-right: 10px;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-}
-
-.btn {
-    background-color: #d7366b;
-    color: #fff;
-    padding: 16px 30px;
-   
-    border-radius: 50%;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top:10px;
-    margin-left: 10px;
-    margin-right: 10px;
-    width: 250px;
-    font-size: 15px;
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px
-   
-   
-    
-}
-.buttons {
-    display: flex;
-    justify-content: center;
-    gap: 15px;
-    margin-bottom: 20px;
-}
-.button button {
-    padding: 10px 20px;
-    border: none;
-    border-radius: 20px;
-    font-size: 16px;
-    cursor: pointer;
-}
-.button-s { 
-     background-color: #355a71;
-    color: #fff;
-    padding: 15px 35px;
-    border-radius: 30px;
-    text-decoration: none;
-    font-weight: bold;
-    margin-top:10px;
-    margin-left: 10px;
-}
-
-.button-s.active {
-    background-color: #ff4081;
-} 
-.btn:hover {
-    background-color: #d7366b;
-}
-
-.navigation {
-    text-align: center;
-    margin-top: 20px;
-}
-
-/* header styles */
+/* Header - Fixed in place */
 header {
     background-color: #f1f6f8;
     padding: 20px 0;
@@ -114,8 +13,31 @@ header {
     width: 100%;
     top: 0;
     z-index: 1000;
+
 }
 
+/* Logo and website name alignment */
+.logo-text-container {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* This ensures a small gap between the logo and text */
+    padding: 0; /* Removes any padding around the container */
+    margin: 0; /* Removes any margin around the container */
+}
+
+.logo {
+    width: 40px;
+    margin-right: 0px; /* Completely removes extra space next to the logo */
+    padding: 0; /* Ensures no padding on the logo */
+}
+
+.website-name {
+    font-size: 1.5em; /* Size of the text */
+    font-weight: bold;
+    color: #355a71; /* Dark blue color */
+    margin-left: 0; /* Ensures no extra margin on the text */
+    padding: 0; /* Ensures no extra padding */
+}
 
 .container {
     display: flex;
@@ -130,21 +52,6 @@ header {
     font-size: 1.5em; /* Size of the text */
     font-weight: bold;
     color: #355a71; /* Dark blue color */
-}
-
-
-.logo-text-container {
-    display: flex;
-    align-items: center;
-    gap: 5px; /* This ensures a small gap between the logo and text */
-    padding: 0; /* Removes any padding around the container */
-    margin: 0; /* Removes any margin around the container */
-}
-
-.logo {
-    width: 40px;
-    margin-right: 0px; /* Completely removes extra space next to the logo */
-    padding: 0; /* Ensures no padding on the logo */
 }
 
 
@@ -178,6 +85,9 @@ nav ul li a:hover::after {
     bottom: -5px;
     left: 0;
 }
+
+
+
 .user-icon {
     position: relative;
 }
@@ -206,35 +116,194 @@ nav ul li a:hover::after {
     font-weight: bold;
 }
 
-
-
-/* Ensure dropdown is visible when hovering on either the icon or the dropdown */
-.user-icon:hover .dropdown, .user-icon .dropdown:hover {
-    display: block;
-}
-/*end header*/
-
-
-/*shared Buttons */
-.buttons-container {
-    text-align: center;
-    margin: 20px 0;
-    margin-top: 150px;
+/* Main container for course details */
+.course-container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.btn {
-    font-size: 16px;
+/* Styling for course name */
+.course-name {
+    font-size: 1rem;
+    color: #333;
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Selector container for Date and Time */
+.selector-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+
+/* Select dropdown styles */
+.date-select,
+.time-select {
     padding: 10px 20px;
-    border: none;
-    cursor: pointer;
-    margin: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 30px;
+    font-size: 14px;
+    background-color: #ffffff;
+    transition: border-color 0.3s ease;
+    min-width: 200px;
+}
+
+.date-select:focus,
+.time-select:focus {
+    border-color: #355a71;
+    outline: none;
+    box-shadow: 0 0 8px rgba(53, 90, 113, 0.2);
+}
+
+/* Request button style */
+.request-button {
     background-color: #ff4081;
     color: white;
-    border-radius: 5px;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+    margin-top: 10px;
 }
-.btn:hover {
-    background-color: #d52c2c;
+
+.request-button:hover {
+    background-color: #d7366b;
+    transform: scale(1.05);
+}
+
+.request-button:active {
+    background-color: #b62a55;
+    transform: scale(0.95);
+}
+
+/* Align schedule details horizontally */
+.schedule {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+
+.container-s {
+    width: 80%;
+    margin: 50px auto;
+    margin-top: 150px;
+}
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+.button button {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+.button-s { 
+     background-color: #355a71;
+    color: #fff;
+    padding: 15px 35px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top:10px;
+    margin-left: 10px;
+}
+
+.button-s.active {
+    background-color: #ff4081;
 } 
+
+.session-card {
+    background-color: #e4e4e49a;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.session-details {
+    display: flex;
+    flex-direction: column;
+}
+.session-details p {
+    margin: 5px 0;
+}
+.buttons-right {
+    display: flex;
+    gap: 10px;
+    margin-right: 50px;
+}
+.join-button {
+    background-color: #6cdf9f;
+    color: #fff;
+    padding: 10px 12px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top:10px;
+    margin-left: 10px;
+}
+
+.cancel-button {
+    background-color: #d7366b;
+    color: #fff;
+    padding: 8px 12px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size:12px;
+    margin-top:10px;
+    margin-left: 10px;
+}
+
+.upload-button {
+    background-color: #36b8b8;
+    color: #fff;
+    padding: 7px 12px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top:10px;
+    margin-left: 10px;
+    font-size:11px;
+}
+
+.view-materials-btn {
+    background-color: #36b8b8;
+    color: #fff;
+    padding: 16px 30px;
+    border-radius: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top:10px;
+    margin-left: 10px;
+margin-right: 10px;
+    width: 250px;
+    font-size: 15px;
+
+}
+.view-materials-btn:hover{
+    background-color: #d7366b;
+}
+
 /* Footer */
 footer {
     background-color: #355a71;

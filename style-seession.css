@@ -1,4 +1,3 @@
-
 body {
     background-color: #ffffff; /* Changed to white for the page background */
     color: #333;
@@ -173,39 +172,73 @@ nav ul li a:hover::after {
     gap: 10px;
     margin-right: 50px;
 }
+/* Updated Button Styles */
 .join-button {
     background-color: #6cdf9f;
     color: #fff;
-    padding: 10px 12px;
+    padding: 10px 20px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    margin-top:10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
     margin-left: 10px;
+}
+
+.join-button:hover {
+    background-color: #5abf8d;
 }
 
 .cancel-button {
     background-color: #d7366b;
     color: #fff;
-    padding: 8px 12px;
+    padding: 10px 20px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    font-size:12px;
-    margin-top:10px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
     margin-left: 10px;
 }
 
+.cancel-button:hover {
+    background-color: #c52858;
+}
+
+.disabled-button {
+    background-color: #ccc;
+    color: #777;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 14px;
+    cursor: not-allowed;
+    margin-top: 10px;
+    margin-left: 10px;
+    text-decoration: none;
+}
+
+/* Example: Additional Styles for Upload Button */
 .upload-button {
     background-color: #36b8b8;
     color: #fff;
-    padding: 7px 12px;
+    padding: 10px 20px;
     border-radius: 30px;
     text-decoration: none;
     font-weight: bold;
-    margin-top:10px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
     margin-left: 10px;
-    font-size:11px;
+}
+
+.upload-button:hover {
+    background-color: #2ca2a2;
 }
 
 .view-materials-btn {
@@ -215,16 +248,19 @@ nav ul li a:hover::after {
     border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    margin-top:10px;
-    margin-left: 10px;
-margin-right: 10px;
-    width: 250px;
+    cursor: pointer;
     font-size: 15px;
-
+    transition: background-color 0.3s ease;
+    margin-top: 10px;
+    margin-left: 10px;
+    margin-right: 10px;
+    width: 250px;
 }
-.view-materials-btn:hover{
+
+.view-materials-btn:hover {
     background-color: #d7366b;
 }
+
 
 /* Footer */
 footer {
@@ -317,5 +353,5 @@ footer {
     background-color: #2a3e52; /* Darker section for copyright notice */
     padding: 10px 0;
     color: #ffffff;
-    text-align: center;
+    text-align: center;
 }

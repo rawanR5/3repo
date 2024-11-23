@@ -5,8 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teacher Schedule - My Schedule</title>
     <link rel="stylesheet" href="teacherSchedule.css">
-    <script type="module" src="firebase.js"></script>
-<script type="module" src="app.js"></script>
+    <script src="teacherSchedule.js"></script>
 
 </head>
 <body> 
@@ -38,6 +37,9 @@
     </header>
 
    <!-- Time Slot Selection Section -->
+
+   <form id="availability-form" method="POST" action="teacherSchedule.php">
+    <input type="hidden" name="data" id="availability-data">
    <div class="container-s">
     <div class="buttons">
         <button class="button-s active">My Schedule</button>
@@ -47,102 +49,138 @@
 
     <!-- Day 1: Sunday -->
     <div class="day-container">
-        <div class="day-header">6 October, Sunday</div>
-        <div class="time-slots">
-            <div class="time-slot">8:00 - 9:00</div>
-            <div class="time-slot">9:00 - 10:00</div>
-            <div class="time-slot">10:00 - 11:00</div>
-            <div class="time-slot">11:00 - 12:00</div>
-            <div class="time-slot">13:00 - 14:00</div>
-            <div class="time-slot">14:00 - 15:00</div>
-            <div class="time-slot">15:00 - 16:00</div>
+        <div class="day-header">
+            <label for="date-sunday">Enter the date for Sunday:</label>
+            <input type="date" id="date-sunday" name="date-sunday" class="date-picker">
+            
         </div>
+        <div class="time-slots">
+            <div class="time-slot" data-day="sunday" data-start-time="08:00:00" data-end-time="09:00:00">8:00 - 9:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="09:00:00" data-end-time="10:00:00">9:00 - 10:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="10:00:00" data-end-time="11:00:00">10:00 - 11:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="11:00:00" data-end-time="12:00:00">11:00 - 12:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="13:00:00" data-end-time="14:00:00">13:00 - 14:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="14:00:00" data-end-time="15:00:00">14:00 - 15:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="15:00:00" data-end-time="16:00:00">15:00 - 16:00</div>
+        </div>
+        
     </div>
 
       
       <div class="day-container">
-        <div class="day-header">7 October, Monday</div>
-        <div class="time-slots">
-            <div class="time-slot">8:00 - 9:00</div>
-            <div class="time-slot">9:00 - 10:00</div>
-            <div class="time-slot">10:00 - 11:00</div>
-            <div class="time-slot">11:00 - 12:00</div>
-            <div class="time-slot">13:00 - 14:00</div>
-            <div class="time-slot">14:00 - 15:00</div>
-            <div class="time-slot">15:00 - 16:00</div>
+        <div class="day-header">
+            <label for="date-monday">Enter the date for Monday:</label>
+            <input type="date" id="date-monday" name="date-monday" class="date-picker">
+            
         </div>
+        <div class="time-slots">
+            <div class="time-slot" data-day="sunday" data-start-time="08:00:00" data-end-time="09:00:00">8:00 - 9:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="09:00:00" data-end-time="10:00:00">9:00 - 10:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="10:00:00" data-end-time="11:00:00">10:00 - 11:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="11:00:00" data-end-time="12:00:00">11:00 - 12:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="13:00:00" data-end-time="14:00:00">13:00 - 14:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="14:00:00" data-end-time="15:00:00">14:00 - 15:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="15:00:00" data-end-time="16:00:00">15:00 - 16:00</div>
+        </div>
+        
     </div>
 
       
       <div class="day-container">
-        <div class="day-header">8 October, Tuesday</div>
-        <div class="time-slots">
-            <div class="time-slot">8:00 - 9:00</div>
-            <div class="time-slot">9:00 - 10:00</div>
-            <div class="time-slot">10:00 - 11:00</div>
-            <div class="time-slot">11:00 - 12:00</div>
-            <div class="time-slot">13:00 - 14:00</div>
-            <div class="time-slot">14:00 - 15:00</div>
-            <div class="time-slot">15:00 - 16:00</div>
+        <div class="day-header">
+            <label for="date-tuesday">Enter the date for Tuesday:</label>
+            <input type="date" id="date-tuesday" name="date-tuesday" class="date-picker">
+            
         </div>
+        <div class="time-slots">
+            <div class="time-slot" data-day="sunday" data-start-time="08:00:00" data-end-time="09:00:00">8:00 - 9:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="09:00:00" data-end-time="10:00:00">9:00 - 10:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="10:00:00" data-end-time="11:00:00">10:00 - 11:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="11:00:00" data-end-time="12:00:00">11:00 - 12:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="13:00:00" data-end-time="14:00:00">13:00 - 14:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="14:00:00" data-end-time="15:00:00">14:00 - 15:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="15:00:00" data-end-time="16:00:00">15:00 - 16:00</div>
+        </div>
+        
     </div>
 
      
      <div class="day-container">
-        <div class="day-header">9 October, Wednesday</div>
-        <div class="time-slots">
-            <div class="time-slot">8:00 - 9:00</div>
-            <div class="time-slot">9:00 - 10:00</div>
-            <div class="time-slot">10:00 - 11:00</div>
-            <div class="time-slot">11:00 - 12:00</div>
-            <div class="time-slot">13:00 - 14:00</div>
-            <div class="time-slot">14:00 - 15:00</div>
-            <div class="time-slot">15:00 - 16:00</div>
+        <div class="day-header">
+            <label for="date-wednesday">Enter the date for Wednesday:</label>
+            <input type="date" id="date-wednesday" name="date-wednesday" class="date-picker">
+            
         </div>
+        <div class="time-slots">
+            <div class="time-slot" data-day="sunday" data-start-time="08:00:00" data-end-time="09:00:00">8:00 - 9:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="09:00:00" data-end-time="10:00:00">9:00 - 10:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="10:00:00" data-end-time="11:00:00">10:00 - 11:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="11:00:00" data-end-time="12:00:00">11:00 - 12:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="13:00:00" data-end-time="14:00:00">13:00 - 14:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="14:00:00" data-end-time="15:00:00">14:00 - 15:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="15:00:00" data-end-time="16:00:00">15:00 - 16:00</div>
+        </div>
+        
     </div>
 
     <div class="day-container">
-        <div class="day-header">10 October, Thursday</div>
-        <div class="time-slots">
-            <div class="time-slot">8:00 - 9:00</div>
-            <div class="time-slot">9:00 - 10:00</div>
-            <div class="time-slot">10:00 - 11:00</div>
-            <div class="time-slot">11:00 - 12:00</div>
-            <div class="time-slot">13:00 - 14:00</div>
-            <div class="time-slot">14:00 - 15:00</div>
-            <div class="time-slot">15:00 - 16:00</div>
+        <div class="day-header">
+            <label for="date-thursday">Enter the date for Thursday:</label>
+            <input type="date" id="date-thursday" name="date-thursday" class="date-picker">
+            
         </div>
+        <div class="time-slots">
+            <div class="time-slot" data-day="sunday" data-start-time="08:00:00" data-end-time="09:00:00">8:00 - 9:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="09:00:00" data-end-time="10:00:00">9:00 - 10:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="10:00:00" data-end-time="11:00:00">10:00 - 11:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="11:00:00" data-end-time="12:00:00">11:00 - 12:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="13:00:00" data-end-time="14:00:00">13:00 - 14:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="14:00:00" data-end-time="15:00:00">14:00 - 15:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="15:00:00" data-end-time="16:00:00">15:00 - 16:00</div>
+        </div>
+        
     </div>
 
     <div class="day-container">
-        <div class="day-header">11 October, Friday</div>
-        <div class="time-slots">
-            <div class="time-slot">8:00 - 9:00</div>
-            <div class="time-slot">9:00 - 10:00</div>
-            <div class="time-slot">10:00 - 11:00</div>
-            <div class="time-slot">11:00 - 12:00</div>
-            <div class="time-slot">13:00 - 14:00</div>
-            <div class="time-slot">14:00 - 15:00</div>
-            <div class="time-slot">15:00 - 16:00</div>
+        <div class="day-header">
+            <label for="date-friday">Enter the date for Friday:</label>
+            <input type="date" id="date-friday" name="date-friday" class="date-picker">
+            
         </div>
+        <div class="time-slots">
+            <div class="time-slot" data-day="sunday" data-start-time="08:00:00" data-end-time="09:00:00">8:00 - 9:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="09:00:00" data-end-time="10:00:00">9:00 - 10:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="10:00:00" data-end-time="11:00:00">10:00 - 11:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="11:00:00" data-end-time="12:00:00">11:00 - 12:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="13:00:00" data-end-time="14:00:00">13:00 - 14:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="14:00:00" data-end-time="15:00:00">14:00 - 15:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="15:00:00" data-end-time="16:00:00">15:00 - 16:00</div>
+        </div>
+        
     </div>
 
 
     <div class="day-container">
-        <div class="day-header">12 October, Saturday</div>
-        <div class="time-slots">
-            <div class="time-slot">8:00 - 9:00</div>
-            <div class="time-slot">9:00 - 10:00</div>
-            <div class="time-slot">10:00 - 11:00</div>
-            <div class="time-slot">11:00 - 12:00</div>
-            <div class="time-slot">13:00 - 14:00</div>
-            <div class="time-slot">14:00 - 15:00</div>
-            <div class="time-slot">15:00 - 16:00</div>
+        <div class="day-header">
+            <label for="date-saturday">Enter the date for Saturday:</label>
+            <input type="date" id="date-saturday" name="date-saturday" class="date-picker">
+            
         </div>
+        <div class="time-slots">
+            <div class="time-slot" data-day="sunday" data-start-time="08:00:00" data-end-time="09:00:00">8:00 - 9:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="09:00:00" data-end-time="10:00:00">9:00 - 10:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="10:00:00" data-end-time="11:00:00">10:00 - 11:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="11:00:00" data-end-time="12:00:00">11:00 - 12:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="13:00:00" data-end-time="14:00:00">13:00 - 14:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="14:00:00" data-end-time="15:00:00">14:00 - 15:00</div>
+            <div class="time-slot" data-day="sunday" data-start-time="15:00:00" data-end-time="16:00:00">15:00 - 16:00</div>
+        </div>
+        
     </div>
 
         <button class="update-button">Update</button>
     </div>
+</form>
 
     <!-- Footer -->
     <footer id="footer">
@@ -173,10 +211,6 @@
         <p class="copyright">&copy; Copyright 2024 all rights reserved</p>
     </footer>
 
-    <script>
-        function toggleSelection(element) {
-            element.classList.toggle('selected');
-        }
-    </script>
+
 </body>
 </html>

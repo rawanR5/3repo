@@ -147,35 +147,115 @@ nav ul li a:hover {
     gap: 20px;
 }
 
-.time-slots {
-    display: grid;
-    grid-template-columns: repeat(7, 1fr);
-    gap: 10px;
-}
 
+
+/* General styles for time slots */
 .time-slot {
-    background-color: #ffffff;
-    padding: 10px;
-    border-radius: 8px;
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    border: 2px solid #ccc; /* Default border */
+    border-radius: 20px; /* Rounded edges */
     cursor: pointer;
+    font-size: 14px;
+    background-color: #f9f9f9; /* Default background */
+    color: #333; /* Default text color */
     text-align: center;
-    min-width: 100px;
+    transition: all 0.3s ease; /* Smooth transition for hover and selected states */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow */
 }
 
-.time-slot.selected {
-    border: 2px solid #ff4081;
+/* Hover effect for time slots */
+.time-slot:hover {
+    background-color: #eaeaea; /* Slightly lighter background on hover */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+    border-color: #bbb; /* Slightly darker border on hover */
 }
+
+/* Selected state for time slots */
+.time-slot.selected {
+    border: 4px solid #ff4081; /* Bold pink border */
+    background-color: #ffffff; /* White background for selected state */
+    color: #ff4081; /* Pink text for selected state */
+    font-weight: bold; /* Bold text */
+}
+
+.time-slot.selected[style*="gray"] {
+    background-color: #e0e0e0; /* Gray background for unavailable slots */
+    border-color: gray;
+    cursor: not-allowed;
+}
+
+.date-picker {
+    width: 180px;
+    padding: 8px 12px;
+    font-size: 14px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.date-picker {
+    width: 180px; /* Adjust the width */
+    padding: 8px 12px;
+    font-size: 14px;
+    font-family: 'Arial', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    background-color: #f9f9f9;
+    color: #333;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.date-picker:hover {
+    border-color: #355a71;
+    background-color: #fff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.date-picker:focus {
+    border-color: #355a71;
+    outline: none;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.date-picker::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    filter: invert(0.5) sepia(1) saturate(3) hue-rotate(170deg); /* Custom color */
+    transition: transform 0.3s ease-in-out;
+}
+
+.date-picker:hover::-webkit-calendar-picker-indicator {
+    transform: scale(1.2); /* Slightly enlarge the calendar icon on hover */
+}
+
 
 .update-button {
-    background-color: #ff4081;
-    color: #fff;
-    padding: 15px 30px;
-    border-radius: 30px;
-    border: none;
-    font-weight: bold;
-    display: block;
-    margin: 20px auto;
+    background-color: #FF69B4; /* Pink background */
+    color: white; /* White text */
+    border: none; /* Remove border */
+    border-radius: 20px; /* Rounded edges */
+    padding: 10px 20px; /* Add padding for a better shape */
+    font-size: 16px; /* Adjust font size */
+    font-weight: bold; /* Bold text */
+    cursor: pointer; /* Pointer cursor on hover */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth hover effect */
 }
+
+.update-button:hover {
+    background-color: #e0559e; /* Slightly darker pink on hover */
+    transform: scale(1.05); /* Slightly enlarge the button on hover */
+}
+
+.update-button:active {
+    background-color: #c04488; /* Darker pink when pressed */
+    transform: scale(0.95); /* Slightly shrink the button on click */
+}
+
+
 
 /* Footer */
 footer {

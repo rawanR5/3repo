@@ -29,7 +29,7 @@ if (!isset($_SESSION['teacher_id'])) {
                 <ul>
                     <li><a href="homePageTeacher.php">Home</a></li>
                     <li><a href="viewCourseAsTeacher.php">Courses</a></li>
-                    <li><a href="incomingSessionTeacher.php">Sessions</a></li>
+                    <li><a href="incomingSession-teacher.php">Sessions</a></li>
                     <li><a href="reviewsTeacher.php">Reviews & Ratings</a></li>
                     <li><a href="requestPage.php">Requests</a></li>
                     <li><a href="#footer">Contact us</a></li>
@@ -97,7 +97,7 @@ if (!isset($_SESSION['teacher_id'])) {
                 <h3>Langbloom</h3>
                 <p>Follow us on social media</p>
                 <div class="social-icons">
-                    <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="facbook.png" alt="Facebook"></a>
                     <a href="#"><img src="instagram.png" alt="Instagram"></a>
                 </div>
             </div>

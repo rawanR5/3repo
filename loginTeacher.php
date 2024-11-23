@@ -105,7 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <h3>Langbloom.</h3>
                 <p>Follow on social service</p>
                 <div class="social-icons">
-                    <a href="#"><img src="facebook.png" alt="Facebook"></a>
+                    <a href="#"><img src="facbook.png" alt="Facebook"></a>
                     <a href="#"><img src="instagram.png" alt="Instagram"></a>
                 </div>
             </div>
