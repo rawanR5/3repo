@@ -65,7 +65,7 @@ $conn->close();
     <!-- Main Section -->
     <div class="section-all">
         <div class="buttons-container2">
-            <button class="btn" onclick="window.location.href='create_new_course.html'">+ Create Course</button>
+            <button class="btn" onclick="window.location.href='create_new_course.php'">+ Create Course</button>
         </div>
         <div class="card-list">
             <?php if (!empty($courses)): ?>
@@ -79,7 +79,7 @@ $conn->close();
                         <span class="grammar"><?= htmlspecialchars($course['title']) ?></span>
                         <h3><?= htmlspecialchars($course['overview']) ?></h3>
                         <button class="btn-manage" 
-                                onclick="window.location.href='manage_course.php?course_id=<?= $course['course_id'] ?>'">
+                                onclick="window.location.href='manage_course_exsist_Teacher.php?course_id=<?= $course['course_id'] ?>'">
                             Manage
                         </button>
                         <div class="arrow">

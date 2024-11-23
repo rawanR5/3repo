@@ -1,11 +1,11 @@
 <?php
-// بدء الجلسة
+
 session_start();
 
-// تحقق من وجود "student_id" في الجلسة. إذا لم يكن موجودًا، يتم إعادة التوجيه إلى صفحة تسجيل الدخول.
+
 if (!isset($_SESSION['student_id'])) {
     header("Location: loginStudent.php");
-    exit(); // تأكد من أنه سيتم إيقاف تنفيذ باقي الكود بعد إعادة التوجيه
+    exit(); 
 }
 ?>
 
@@ -20,7 +20,7 @@ if (!isset($_SESSION['student_id'])) {
     <script type="module" src="app.js"></script>
 </head>
 <body>
-    <!-- Header -->
+   
     <header>
         <div class="container">
             <div class="logo-text-container">
