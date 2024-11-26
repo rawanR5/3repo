@@ -62,17 +62,17 @@ $conn->close();
         </div>
         <nav>
             <ul>
-                <li><a href="homePageStudent.html">Home</a></li>
-                <li><a href="browsCoursesStudent.html">Courses</a></li>
-                <li><a href="incomingSession-student.html">Sessions</a></li>
+                <li><a href="homePageStudent.php">Home</a></li>
+                <li><a href="Browse_courses_student.php">Courses</a></li>
+                <li><a href="incomingSession-student.php">Sessions</a></li>
                 <li><a href="#footer">Contact us</a></li>
             </ul>
         </nav>
         <div class="user-icon">
             <img src="manageIcon1.png" alt="User Icon">
             <div class="dropdown">
-                <a href="manageAccStudent.html">Manage Profile</a>
-                <a href="homePage.html">Log out</a>
+                <a href="manageAccStudent.php">Manage Profile</a>
+                <a href="homePage.php">Log out</a>
             </div>
         </div>
     </div>
@@ -124,7 +124,7 @@ $conn->close();
         <div class="footer-section">
             <h3>Links</h3>
             <ul>
-                <li><a href="homePageStudent.html">Home</a></li>
+                <li><a href="homePageStudent.php">Home</a></li>
                 <li><a href="#about">About us</a></li>
                 <li><a href="#footer">Contact us</a></li>
             </ul>
