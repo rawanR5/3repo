@@ -44,19 +44,19 @@ $conn->close();
             </div>
             <nav>
                 <ul>
-                    <li><a href="homePageTeacher.html">Home</a></li>
-                    <li><a href="view_course_as_teacher.php">Courses</a></li>
-                    <li><a href="incomingSession-teacher.html">Sessions</a></li>
-                    <li><a href="reviewsTeacher.html">Reviews & Ratings</a></li>
-                    <li><a href="requestPage.html">Requests</a></li>
+                <li><a href="homePageTeacher.php">Home</a></li>
+                    <li><a href="view_course_asTeacher.php">Courses</a></li>
+                    <li><a href="incomingSession-teacher.php">Sessions</a></li>
+                    <li><a href="reviewsTeacher.php">Reviews & Ratings</a></li>
+                    <li><a href="requestPage.php">Requests</a></li>
                     <li><a href="#footer">Contact us</a></li>
                 </ul>
             </nav>
             <div class="user-icon">
                 <img src="manageIcon1.png" alt="User Icon">
                 <div class="dropdown">
-                    <a href="manageAccTeacher.html">Manage Profile</a>
-                    <a href="homePage.html">Log out</a>
+                <a href="manageAccTeacher.php">Manage Profile</a>
+                <a href="homePage.php">Log out</a>
                 </div>
             </div>
         </div>
@@ -108,7 +108,7 @@ $conn->close();
             <div class="footer-section">
                 <h3>Links</h3>
                 <ul>
-                    <li><a href="homePageTeacher.html">Home</a></li>
+                    <li><a href="homePageTeacher.php">Home</a></li>
                     <li><a href="#about">About us</a></li>
                     <li><a href="#footer">Contact us</a></li>
                 </ul>
