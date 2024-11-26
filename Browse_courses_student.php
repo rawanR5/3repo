@@ -81,7 +81,7 @@ $conn->close();
  <!-- Button Section -->
 <div class="buttons-container">
     <button class="btn grey-btn1" onclick="window.location.href='Browse_courses_student.php'">Browse Courses</button>
-    <button class="btn grey-btn" onclick="window.location.href='studentCourses.html'">My Courses</button>
+    <button class="btn grey-btn" onclick="window.location.href='studentCourses.php'">My Courses</button>
 </div>
 
     <!-- Main Section -->
