@@ -124,7 +124,7 @@ if ($result === false) {
             <div class="footer-section">
                 <h3>Links</h3>
                 <ul>
-                    <li><a href="homePageStudent.html">Home</a></li>
+                    <li><a href="homePageStudent.php">Home</a></li>
                     <li><a href="#about">About us</a></li>
                     <li><a href="#footer">Contact us</a></li>
                 </ul>
