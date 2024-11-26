@@ -68,9 +68,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             </div>
             <nav>
                 <ul>
-                    <li><a href="homePageStudent.html">Home</a></li>
-                    <li><a href="browsCoursesStudent.html">Courses</a></li>
-                    <li><a href="incomingSession-student.html">Sessions</a></li>
+                    <li><a href="homePageStudent.php">Home</a></li>
+                    <li><a href="Brows_courses_student.php">Courses</a></li>
+                    <li><a href="incomingSession-student.php">Sessions</a></li>
                     <li><a href="#footer">Contact us</a></li>
                 </ul>
             </nav>
@@ -122,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             <div class="footer-section">
                 <h3>Links</h3>
                 <ul>
-                    <li><a href="homePageStudent.html">Home</a></li>
+                    <li><a href="homePageStudent.php">Home</a></li>
                     <li><a href="#about">About us</a></li>
                     <li><a href="#footer">Contact us</a></li>
                 </ul>
