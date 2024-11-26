@@ -51,7 +51,7 @@ if (!isset($_SESSION['student_id'])) {
             <div class="hero-text">
                 <h1>Achieve Your Learning Goals, Effortlessly!</h1>
                 <p>Join our platform to enjoy personalized learning experiences with expert guidance anytime, anywhere.</p>
-                <a href="browsCoursesStudent.html" class="btn">Browse Courses</a>
+                <a href="Browse_courses_student.php" class="btn">Browse Courses</a>
             </div>
             <div class="hero-image">
                 <img src="studentPhoto.png" alt="Student Image">
