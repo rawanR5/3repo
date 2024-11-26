@@ -54,7 +54,7 @@
         <nav>
             <ul>
               <li><a href="homePageTeacher.php">Home</a></li>
-              <li><a href="view course As teacher.php">Courses</a></li>
+              <li><a href="view_course_asTeacher.php">Courses</a></li>
               <li><a href="incomingSession-teacher.php">Sessions</a></li>
               <li><a href="reviewsTeacher.php">Reviews & Ratings</a></li>
               <li><a href="requestPage.php">Requests</a></li>

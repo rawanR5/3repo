@@ -72,7 +72,7 @@ $conn->close();
             <nav>
                 <ul>
                     <li><a href="homePageStudent.php">Home</a></li>
-                    <li><a href="Brows_courses_student.php">Courses</a></li>
+                    <li><a href="Browse_courses_student.php">Courses</a></li>
                     <li><a href="incomingSession-student.php">Sessions</a></li>
                     <li><a href="#footer">Contact us</a></li>
                 </ul>
