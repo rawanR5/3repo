@@ -53,11 +53,11 @@
         </div>
         <nav>
             <ul>
-              <li><a href="homePageTeacher.html">Home</a></li>
-              <li><a href="view course As teacher.html">Courses</a></li>
-              <li><a href="incomingSession-teacher.html">Sessions</a></li>
-              <li><a href="reviewsTeacher.html">Reviews & Ratings</a></li>
-              <li><a href="requestPage.html">Requests</a></li>
+              <li><a href="homePageTeacher.php">Home</a></li>
+              <li><a href="view course As teacher.php">Courses</a></li>
+              <li><a href="incomingSession-teacher.php">Sessions</a></li>
+              <li><a href="reviewsTeacher.php">Reviews & Ratings</a></li>
+              <li><a href="requestPage.php">Requests</a></li>
               <li><a href="#footer">Contact us</a></li>
             </ul>
         </nav>
@@ -123,7 +123,7 @@
         <div class="footer-section">
             <h3>Links</h3>
             <ul>
-                <li><a href="homePageTeacher.html">Home</a></li>
+                <li><a href="homePageTeacher.php">Home</a></li>
                 <li><a href="#about">About us</a></li>
                 <li><a href="#footer">Contact us</a></li>
             </ul>
